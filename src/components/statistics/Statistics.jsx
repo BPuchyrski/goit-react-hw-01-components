@@ -1,4 +1,5 @@
 import css from './Statistics.module.css';
+import PropTypes from 'prop-types';
 function getRandomColor() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -27,5 +28,8 @@ function Statistics({ title, stats }) {
     </section>
   );
 }
-
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.number,
+};
 export default Statistics;
